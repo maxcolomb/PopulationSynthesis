@@ -65,11 +65,11 @@ def compute_proportion_file_from_unique_array_and_df(
             [dict_unique_values[col] for col in cols]
         ))
         freq_temp = preprocessed_data_df[cols].value_counts(normalize=True)
-        print(freq_temp.index)
-        print("-")
-        print(freq_temp)
-        print("-")
-        print(freq_serie.loc)
+        # print(freq_temp.index)
+        # print("-----")
+        # print(freq_temp)
+        # print("-----")
+        # print(freq_serie.loc)
         freq_serie.loc[freq_temp.index] = freq_temp
         freq_values = freq_serie.to_numpy()
         
