@@ -8,14 +8,14 @@ def get_info_file(config):
 
     info_path = get_info_path(config)
     
-    info = pd.read_csv(info_path, sep = ";")
+    info = pd.read_csv(info_path, sep = ",")
     info = info[info[attr_setname]]
     
     return info.reset_index()
 
 
 def import_data(filename, columns, columns_cat):
-    
+
     data = pd.read_csv(filename, sep=";", low_memory=False, usecols=columns)
     
     for idx in columns_cat:
