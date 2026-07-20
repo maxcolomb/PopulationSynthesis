@@ -8,7 +8,7 @@ def get_info_file(config):
 
     info_path = get_info_path(config)
     
-    info = pd.read_csv(info_path, sep = ",")
+    info = pd.read_csv(info_path, sep = ";")
     info = info[info[attr_setname]]
     
     return info.reset_index()
